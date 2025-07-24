@@ -1,0 +1,107 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+  margin: 0;
+  padding: 40px 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  color: #333;
+  user-select: none;
+  background-attachment: fixed;
+  transition: background 0.5s ease;
+}
+
+h1 {
+  margin-bottom: 30px;
+  font-weight: 700;
+  font-size: 3rem;
+  color: #fff;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+}
+
+.mode-selection {
+  margin-bottom: 25px;
+  font-size: 1.2rem;
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 110px);
+  grid-template-rows: repeat(3, 110px);
+  gap: 10px;
+  justify-content: center;
+  margin: 0 auto 30px auto;
+  background: rgba(255, 255, 255, 0.85);
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  transition: box-shadow 0.3s ease;
+}
+
+.board:hover {
+  box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+}
+
+.cell {
+  background-color: #fff;
+  border: 3px solid #ff6f91;
+  font-size: 72px;
+  font-weight: 700;
+  color: #ff6f91;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(255, 111, 145, 0.3);
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.cell:hover {
+  background-color: #ff6f91;
+  color: #fff;
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(255, 111, 145, 0.6);
+}
+
+.cell.x {
+  color: #ff6f91;
+}
+
+.cell.o {
+  color: #6a4c93;
+}
+
+#status {
+  font-size: 22px;
+  margin-bottom: 25px;
+  min-height: 28px;
+  font-weight: 600;
+  color: #fff;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+}
+
+#restart {
+  padding: 12px 28px;
+  font-size: 18px;
+  cursor: pointer;
+  background: #ff6f91;
+  border: none;
+  border-radius: 25px;
+  color: white;
+  font-weight: 700;
+  box-shadow: 0 6px 15px rgba(255, 111, 145, 0.5);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#restart:hover {
+  background-color: #ff4a6e;
+  box-shadow: 0 8px 20px rgba(255, 74, 110, 0.7);
+}
